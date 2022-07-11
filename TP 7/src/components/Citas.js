@@ -1,15 +1,18 @@
-export default function Cita(props) {
+export default function Cita({props}) {
+    console.log(props)
     return (
         <div>
             <p>Mascota:</p>
-            <span>{props.nombre}</span>
+            <span>{props.cita.nombreMascota}</span>
+            <p>Mascota:</p>
+            <span>{props.cita.nombrePropietario}</span>
             <p>Fecha:</p>
-            <span>{props.fecha}</span>
+            <span>{props.cita.fecha}</span>
             <p>Hora:</p>
-            <span>{props.hora}</span>
+            <span>{props.cita.hora}</span>
             <p>Sintomas:</p>
-            <span>{props.sintomas}</span>
-            <button className="button elimnar u-full-width">Eliminar ×</button>
+            <span>{props.cita.sintomas}</span>
+            <button className="button eliminar u-full-width" onClick={() => props.eliminar(props.cita.id)}>Eliminar</button>
         </div>
     )
 }

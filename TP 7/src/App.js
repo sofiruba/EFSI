@@ -1,27 +1,23 @@
 import './App.css';
-import FormCita from './components/FormCita';
-import Cita from './components/Citas';
+
+import Listado from './components/Listado';
+import CrearCita from './components/CrearCIta';
+const listado_citas = []
+
 function App() {
+  console.log(listado_citas)
   return (
-      <div id="root">
-        <h1>
-          Administrador de pacientes
-        </h1>
-        <div className='container'>
-          <div className='row'>
-            <div className='one-half column'>
-              <h2>Crear cita</h2>
-              <FormCita></FormCita>
-            </div>
-            <div className='one-half column'>
-              <h2>Administra tus citas</h2>
-              <div className='cita'>
-                <Cita></Cita>
-              </div>
-            </div>
-          </div>
+    <div>
+      <h1>
+        Administrador de pacientes
+      </h1>
+      <div className='container'>
+        <div className='row'>
+          <CrearCita citas={listado_citas}></CrearCita>
+          <Listado citas={listado_citas}></Listado>
         </div>
       </div>
+    </div>
   );
 }
 
