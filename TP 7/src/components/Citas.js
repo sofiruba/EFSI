@@ -1,7 +1,7 @@
 export default function Cita({props}) {
     console.log(props)
     return (
-        <div>
+        <div class="cita">
             <p>Mascota:</p>
             <span>{props.cita.nombreMascota}</span>
             <p>Mascota:</p>
