@@ -1,6 +1,6 @@
 export default function PersonaCard({persona}){
     return (
-        <div className="persona">
+        <div className="persona card">
             <p>Nombre:</p>
             <span>{persona.nombre}</span>
             <p>Apellido:</p>
