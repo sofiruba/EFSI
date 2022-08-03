@@ -3,10 +3,9 @@ const Layout = () => {
     return (
         <>
             <nav>
-                <Link to="/">Home</Link>
-                <Link to="/estadistica">Estadisticas</Link>
-                <Link to="/persona">Buscar persona</Link>
-                <Link to="/contacto">Contacto</Link>
+                <Link className="link" to="/">Home</Link>
+                <Link className="link" to="/estadistica">Estadisticas</Link>
+                <Link className="link" to="/contacto">Contacto</Link>
             </nav>
             <Outlet />
         </>

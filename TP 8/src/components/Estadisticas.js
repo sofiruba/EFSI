@@ -21,7 +21,7 @@ export default function Estadisticas({ personas }) {
             </div>
             <div>
                 <h2>Persona mayor</h2>
-                <div className="estadistica">
+                <div className="estadistica ">
                     {persona_mayor.map(p => (
                         <PersonaCard key={parseInt(p.id)} persona={p}></PersonaCard>
                     ))
@@ -30,7 +30,7 @@ export default function Estadisticas({ personas }) {
             </div>
             <div>
                 <h2>Persona menor</h2>
-                <div className="estadistica">
+                <div className="estadistica " >
                     {persona_menor.map(p => (
                         <PersonaCard key={parseInt(p.id)} persona={p}></PersonaCard>
                     ))
