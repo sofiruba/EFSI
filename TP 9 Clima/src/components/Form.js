@@ -39,7 +39,7 @@ export default function Form({setClima}) {
                 </div>
                 <div className="input-field col s12">
                 <label htmlFor="pais">Pais:</label>
-                    <Select  placeholder="seleccionar un pais" options={options} className='select'></Select>
+                    <Select onChange={v => setPais(v.value)} placeholder="Seleccionar un pais" options={options}  className='select'></Select>
                 </div>
                 <div className="input-field col s12">
                     <input

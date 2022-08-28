@@ -7,8 +7,7 @@ import { createContext, useState } from 'react';
 export const ClimaContext = createContext({})
 function App() {
 
-  const [clima, setClima] = useState({})
-
+  const [clima, setClima] = useState({pais: 'AR', ciudad: 'buenos aires', temp: 0})
   return (
     <div className="App">
       <nav>
@@ -19,7 +18,7 @@ function App() {
           <div className="row">
             <Form setClima={setClima}></Form>
             <ClimaContext.Provider value={clima}>
-              <Clima></Clima>
+              <Clima props={{setClima}}></Clima>
             </ClimaContext.Provider>
           </div>
         </div>
