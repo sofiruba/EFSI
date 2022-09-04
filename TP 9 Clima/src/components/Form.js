@@ -26,8 +26,8 @@ export default function Form({setClima}) {
     }
     // https://react-select.com/home
     return (
-        <div className="col m6 s12">
-            <form onSubmit={buscarClima}>
+        <div className="col m6 s12 ">
+            <form onSubmit={buscarClima} className='row'>
                 <div className="input-field col s12">
                     <input
                         type="text"
@@ -45,7 +45,7 @@ export default function Form({setClima}) {
                     <input
                         type="submit"
                         value="Buscar Clima"
-                        className="waves-effect waves-light btn-large btn-block yellow accent-4"
+                        className="waves-effect waves-light btn-large btn-block blue accent-4"
                     />
                 </div>
             </form>
