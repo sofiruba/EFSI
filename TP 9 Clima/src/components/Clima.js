@@ -5,8 +5,9 @@ import { ClimaContext } from '../App'
 export default function Clima() {
     const [temp, setTemp] = useState({temp: 0, temp_min: 0, temp_max: 0})
     const Clima = useContext(ClimaContext)
-    const q =  `${Clima.ciudad},${Clima.pais}`
-    let ciudad = Clima.ciudad
+    let ciudad = Clima.ciudad.charAt(0).toUpperCase() + Clima.ciudad.slice(1);
+    const q =  `${ciudad},${Clima.pais}`
+
     let cont =document.getElementById('error')
     const getClima = () => {
         return axios.get('http://api.openweathermap.org/data/2.5/weather', {params:{q : q, APPID: '467eb2e2a1738c82e813a30610d7c354' }})

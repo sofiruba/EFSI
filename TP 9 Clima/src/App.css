@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: linear-gradient(288deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(90deg, #DBF4FF, #2F5CFF);
 }
 nav {
   display: block;
@@ -13,29 +13,31 @@ nav {
   background-color: transparent;
 }
 .input-field label {
-  color: white;
+  color: gray;
+  margin-left: 1%;
 }
 
-.input-field input[type=text]:focus + label {
-  color: white;
-} 
+.input-field input[type=text]{
+  background-color: #FFF;
+}
+
 
 .input-field input[type=text]:focus {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid grey;
   box-shadow: 0 1px 0 0 #000;
 }
 
 input[type=text]:not(.browser-default) {
-  border-bottom: 1px solid white;
-  color: white;
+  border-bottom: 1px solid grey;
+  color: grey;
 }
 input[type=text]:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid white;
-  -webkit-box-shadow: 0 1px 0 0 white;
-  box-shadow: 0 1px 0 0 white;
+  border-bottom: 1px solid grey;
+  -webkit-box-shadow: 0 1px 0 0 grey;
+  box-shadow: 0 1px 0 0 grey;
 }
 input[type=text]:not(.browser-default):focus:not([readonly]) + label {
-  color: white;
+  color: black;
 }
 
 .contenedor-form {
@@ -90,7 +92,7 @@ input[type=text]:not(.browser-default):focus:not([readonly]) + label {
   position: absolute;
 }
 .card-panel{
-  border-radius: 10%;
+  border-radius: 1%;
 }
 
 .title{
