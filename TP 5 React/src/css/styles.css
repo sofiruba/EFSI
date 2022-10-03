@@ -110,4 +110,9 @@ body{
       transform: rotate(360deg);
     }
   }
-  
+  .nav-link:any-link{
+    color: black;
+  }
+  .nav-link:hover{
+    color: black;
+  }

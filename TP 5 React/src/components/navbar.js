@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  '../css/styles.css'
 import Logo from '../img/Logo.png'
+import Layout from './layout';
 export default function Navbarf() {
     return (
         /*
@@ -25,21 +26,8 @@ export default function Navbarf() {
                   <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                   </button>
-                  <Container className="collapse navbar-collapse" id="navbarSupportedConten">
-                    <ul className="navbar-nav ms-auto">
-                      <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="/#" style={{color: "black"}}>Inicio</a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/#" style={{color: "black"}}>Quienes somos</a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/#" style={{color: "black"}}>Productos</a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/#" style={{color: "black"}}>Contacto</a>
-                      </li>
-                    </ul>
+                  <Container >
+                    <Layout></Layout>
                   </Container>
                 </Container>
               </nav>
