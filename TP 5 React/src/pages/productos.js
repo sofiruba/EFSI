@@ -1,1 +1,1 @@
-export default function Productos(){}
+export default function ProductosPage(){}

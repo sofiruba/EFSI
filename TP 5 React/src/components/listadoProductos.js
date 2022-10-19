@@ -1,4 +1,5 @@
 import Card from "./card"
+import Productos from "../Productos"
 export default function ListaProductos(){
 
     return(
@@ -7,12 +8,9 @@ export default function ListaProductos(){
                     <h3>Productos destacados</h3>
             </div>
             <div className="row row-cols-1 row-cols-md-3 g-4">     
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+            {Productos.map(p => (
+                <Card props={p}></Card>
+            ))}
             </div>
         </div>
     )
