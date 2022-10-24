@@ -3,7 +3,7 @@ import Inicio from "../pages/inicio";
 import Contacto from "../pages/contacto";
 import ProductosPage from "../pages/productos";
 import QuienesSomos from "../pages/quienessomos";
-import Carrito from "../pages/carrito";
+import Carrito from "../components/carrito";
 import ListadoContext from "../context";
 export default function Router() {
     return (
@@ -13,7 +13,6 @@ export default function Router() {
                 <Route path="/contacto" element={<Contacto/>} ></Route>
                 <Route path="/productos" element={<ProductosPage/>} ></Route>
                 <Route path="/quienessomos" element={<QuienesSomos/>} ></Route>
-                <Route path='/carrito' element={<Carrito listado={ListadoContext} />} ></Route>
 
             </Routes>
         </BrowserRouter>

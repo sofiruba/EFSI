@@ -6,11 +6,11 @@ import Logo from '../img/Logo.png'
 import { Link, Outlet } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import Modal from './carrito';
+import { useState } from 'react';
 export default function Navbar() {
   const navigate = useNavigate()  
-  const carritoPage = () => {
-      navigate("/carrito", {abierto: true})
-  }
+  const [isOpen, setIsOpen] = useState(false);
   return (
     /*
     <Navbar bg="light" variant="light">
@@ -47,7 +47,7 @@ export default function Navbar() {
                     <li className="nav-item">
                         <Link className="nav-link active" to="/contacto">Contacto</Link>
                     </li>
-                    <li onClick={carritoPage}>
+                    <li onClick={()=> setIsOpen(true)}>
                         <FaShoppingCart   size={15} ></FaShoppingCart>
                     </li>
                 </ul>
@@ -58,6 +58,7 @@ export default function Navbar() {
           </Container>
         </Container>
       </nav>
+      {isOpen && <Modal setIsOpen={setIsOpen} />}
     </header>
   );
 }
