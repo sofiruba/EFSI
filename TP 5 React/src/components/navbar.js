@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Navbar() {
   const navigate = useNavigate()  
   const carritoPage = () => {
-      navigate("/carrito")
+      navigate("/carrito", {abierto: true})
   }
   return (
     /*
