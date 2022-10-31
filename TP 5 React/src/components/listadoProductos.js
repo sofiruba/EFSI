@@ -1,7 +1,9 @@
 import Card from "./card"
 import Productos from "../Productos"
+import { useContext } from "react"
+import ListadoContext from "../context"
 export default function ListaProductos(){
-
+    const Lista = useContext(ListadoContext)
     return(
         <div>
             <div style={{marginTop: 1.5}}>
@@ -9,7 +11,7 @@ export default function ListaProductos(){
             </div>
             <div className="row row-cols-1 row-cols-md-3 g-4">     
             {Productos.map(p => (
-                <Card props={p}></Card>
+                <Card key={p.id} props={p}></Card>
             ))}
             </div>
         </div>

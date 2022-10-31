@@ -6,11 +6,8 @@ import Logo from '../img/Logo.png'
 import { Link, Outlet } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import Modal from './carrito';
-import { useState } from 'react';
-export default function Navbar() {
-  const navigate = useNavigate()  
-  const [isOpen, setIsOpen] = useState(false);
+
+export default function Navbar({props}) {
   return (
     /*
     <Navbar bg="light" variant="light">
@@ -36,18 +33,18 @@ export default function Navbar() {
             <nav className="collapse navbar-collapse" id="navbarSupportedConten">
             <ul className="navbar-nav ms-auto">
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/">Inicio</Link>
+                        <Link className="nav-link active" to="/" >Inicio</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/quienessomos">Quienes somos</Link>
+                        <Link className="nav-link active" to="/quienessomos" params={props.listado} >Quienes somos</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/productos">Productos</Link>
+                        <Link className="nav-link active" to="/productos" params={props.listado} >Productos</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" to="/contacto">Contacto</Link>
+                        <Link className="nav-link active" to="/contacto" params={props.listado} >Contacto</Link>
                     </li>
-                    <li onClick={()=> setIsOpen(true)}>
+                    <li onClick={()=> props.setIsOpen(true)}>
                         <FaShoppingCart   size={15} ></FaShoppingCart>
                     </li>
                 </ul>
@@ -58,7 +55,7 @@ export default function Navbar() {
           </Container>
         </Container>
       </nav>
-      {isOpen && <Modal setIsOpen={setIsOpen} />}
+
     </header>
   );
 }

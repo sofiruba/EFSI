@@ -1,4 +1,3 @@
-import { createContext, useContext } from "react";
-
- const ListadoContext = createContext()
- export default ListadoContext
+import { createContext } from "react";
+const ListadoContext = createContext()
+export default ListadoContext
