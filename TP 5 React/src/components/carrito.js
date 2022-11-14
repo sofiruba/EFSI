@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Modal.module.css";
+import styles from "../css/Modal.module.css";
 import { RiCloseLine } from "react-icons/ri";
 import { useContext } from "react";
 import ListadoContext from "../context";

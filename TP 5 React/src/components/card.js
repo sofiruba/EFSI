@@ -14,7 +14,7 @@ export default function Card({props}) {
                     <p className="card-text">{props.descripcion}</p>
                     <p className="card-text">${props.precio}</p>
                                         {
-                        Lista.lista.includes(props) ?    <a className='deleteBtn' onClick={() => Lista.eliminar_item(props.id)} >Eliminar del carrito</a> : <a className='btn-style' onClick={() => Lista.agregar_item(props)}>Agregar al carrito</a>
+                        Lista.lista.includes(props) ?    <a className='btn-style' onClick={() => Lista.agregar_item(props)}>Volver a agregar al carrito</a> : <a className='btn-style' onClick={() => Lista.agregar_item(props)}>Agregar al carrito</a>
                     }
                     
                 </div>

@@ -9,8 +9,8 @@ export default function ListaCarrito(){
         <div>
 
             <div className="lista">     
-            {Lista.lista.map(p => (
-                <CardCarrito key={p.id} props={p}></CardCarrito>
+            {Lista.lista.map((p,index) => (
+                <CardCarrito key={index} props={{p, index}}></CardCarrito>
             ))}
             </div>
         </div>

@@ -8,8 +8,8 @@ export default function Router() {
 
 
     const [lista, setLista] = useState([])
-    const eliminar_item = (id) => {
-      let nueva_lista = lista.filter(i => i.id !== id)
+    const eliminar_item = (index) => {
+      let nueva_lista = lista.filter((i, idx) => idx !== index)
       setLista(nueva_lista)
       console.log(lista, 'eliminado')
   
